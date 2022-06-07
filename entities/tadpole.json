@@ -58,7 +58,7 @@
         "can_sink": false,
         "avoid_damage_blocks": true
       },
-      "minecraft:movement.sway": { //This is needed to allow the tadpole to swim
+      "minecraft:movement.sway": {
         "sway_amplitude": 0.0
       },
       "minecraft:movement": {
