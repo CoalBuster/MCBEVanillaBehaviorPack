@@ -211,7 +211,6 @@
     "components": {
       "minecraft:is_hidden_when_invisible": {
       },
-      // Zombie_villager Components
       "minecraft:navigation.walk": {
         "is_amphibious": true,
         "can_pass_doors": true,
@@ -476,7 +475,6 @@
 
       "minecraft:interact": {
         "interactions": {
-          // Curing the villager
           "on_interact": {
             "filters": {
               "all_of": [
@@ -503,7 +501,6 @@
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
-      // Zombie_villager Behaviors
       "minecraft:behavior.melee_attack": {
         "priority": 6
       },
@@ -729,72 +726,58 @@
       "minecraft:entity_transformed": {
         "filters": { "test": "has_component", "operator": "!=", "value": "minecraft:variant" },
         "sequence": [
-          // Transform baby villager to baby zombie
           {
             "filters": { "test": "has_component", "subject": "other", "value": "minecraft:is_baby" },
             "add": { "component_groups": [ "baby" ] }
           },
-          // Transform adult villager to adult zombie
           {
             "filters": {  "test": "has_component",  "subject": "other", "operator": "!=", "value": "minecraft:is_baby" },
             "add": { "component_groups": [ "adult" ] }
           },
-          // Transform farmer zombie to farmer villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "farmer" },
             "add": { "component_groups": [ "farmer" ] }
           },
-          // Transform fisherman zombie to fisherman villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "fisherman" },
             "add": { "component_groups": [ "fisherman" ] }
           },
-          // Transform shepherd zombie to shepherd villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "shepherd" },
             "add": { "component_groups": [ "shepherd" ] }
           },
-          // Transform fletcher zombie to fletcher villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "fletcher" },
             "add": { "component_groups": [ "fletcher" ] }
           },
-          // Transform librarian zombie to librarian villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "librarian" },
             "add": { "component_groups": [ "librarian" ] }
           },
-          // Transform cartographer zombie to cartographer villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "cartographer" },
             "add": { "component_groups": [ "cartographer" ] }
           },
-          // Transform cleric zombie to cleric villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "cleric" },
             "add": { "component_groups": [ "cleric" ] }
           },
-          // Transform armorer zombie to armorer villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "armorer" },
             "add": { "component_groups": [ "armorer" ] }
           },
-          // Transform weaponsmith zombie to weaponsmith villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "weaponsmith" },
             "add": { "component_groups": [ "weaponsmith" ] }
           },
-          // Transform toolsmith zombie to toolsmith villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "toolsmith" },
             "add": { "component_groups": [ "toolsmith" ] }
           },
-          // Transform butcher zombie to butcher villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "butcher" },
             "add": { "component_groups": [ "butcher" ] }
           },
-          // Transform leatherworker zombie to leatherworker villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "leatherworker" },
             "add": { "component_groups": [ "leatherworker" ] }

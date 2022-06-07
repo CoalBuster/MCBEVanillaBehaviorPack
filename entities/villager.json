@@ -612,73 +612,58 @@
 
       "minecraft:entity_transformed": {
         "sequence": [
-          // Transform baby zombie to baby villager
           {
             "filters": { "test": "has_component", "subject": "other", "value": "minecraft:is_baby" },
             "add": { "component_groups": [ "baby" ] }
           },
-          // Transform adult zombie to adult villager
           {
             "filters": { "test": "has_component", "subject": "other", "operator": "!=", "value": "minecraft:is_baby" },
             "add": { "component_groups": [ "adult" ] }
           },
-
-          // Transform farmer zombie to farmer villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "farmer"},
             "add": { "component_groups": [ "farmer", "behavior_peasant" ] }
           },
-          // Transform fisherman zombie to fisherman villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "fisherman"},
             "add": { "component_groups": [ "fisherman", "behavior_peasant" ] }
           },
-          // Transform shepherd zombie to shepherd villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "shepherd" },
             "add": { "component_groups": [ "shepherd", "behavior_peasant" ] }
           },
-          // Transform fletcher zombie to fletcher villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "fletcher" },
             "add": { "component_groups": [ "fletcher", "behavior_peasant" ] }
           },
-          // Transform librarian zombie to librarian villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "librarian" },
             "add": { "component_groups": [ "librarian", "behavior_non_peasant" ] }
           },
-          // Transform cartographer zombie to cartographer villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "cartographer" },
             "add": { "component_groups": [ "cartographer", "behavior_non_peasant" ] }
           },
-          // Transform cleric zombie to cleric villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "cleric" },
             "add": { "component_groups": [ "cleric", "behavior_non_peasant" ] }
           },
-          // Transform armorer zombie to armorer villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "armorer" },
             "add": { "component_groups": [ "armorer", "behavior_non_peasant" ] }
           },
-          // Transform weaponsmith zombie to weaponsmith villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "weaponsmith" },
             "add": { "component_groups": [ "weaponsmith", "behavior_non_peasant" ] }
           },
-          // Transform toolsmith zombie to toolsmith villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "toolsmith" },
             "add": { "component_groups": [ "toolsmith", "behavior_non_peasant" ] }
           },
-          // Transform butcher zombie to butcher villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "butcher" },
             "add": { "component_groups": [ "butcher", "behavior_non_peasant" ] }
           },
-          // Transform leatherworker zombie to leatherworker villager
           {
             "filters": { "test": "is_family", "subject": "other", "value": "leatherworker" },
             "add": { "component_groups": [ "leatherworker", "behavior_non_peasant" ] }
@@ -840,7 +825,7 @@
         "remove": { "component_groups": [ "baby" ] }
       },
       
-      "minecraft:start_celebrating": { // Event must be called exactly this for village to fire it when a raid is won
+      "minecraft:start_celebrating": {
         "add": { "component_groups": [ "minecraft:celebrate"] }
       },
       

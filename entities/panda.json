@@ -156,8 +156,6 @@
         },
         "minecraft:behavior.panic": {
           "priority": 1,
-          // Lazy panda's move half the speed, so double their multiplier when they panic
-          // Otherwise, they don't actually look like they're panicking
           "speed_multiplier": 2.5
         },
         "minecraft:movement": {
@@ -279,7 +277,6 @@
         "minecraft:behavior.panic": {
           "priority": 1,
           "speed_multiplier": 1.25,
-          // Aggressive pandas don't panic from mob damage
           "ignore_mob_damage": true
         }
       },

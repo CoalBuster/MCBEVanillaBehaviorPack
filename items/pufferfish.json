@@ -20,7 +20,7 @@
             "amplifier": 3
           },
           {
-            "name": "nausea", // confusion
+            "name": "nausea",
             "duration": 15,
             "amplifier": 1
           },

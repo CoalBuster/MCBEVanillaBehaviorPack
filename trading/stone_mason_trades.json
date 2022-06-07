@@ -1,7 +1,7 @@
 {
   "tiers": [
     {
-      "trades": [ // tier 1
+      "trades": [
         {
           "wants": [
             {
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "trades":[ // tier 2
+      "trades":[
       {
         "wants": [
           {
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "trades": [ // tier 3
+      "trades": [
         {
           "wants": [
             {
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "trades": [ // tier 4
+      "trades": [
         {
           "wants": [
             {
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "trades": [ // tier 5
+      "trades": [
         {
           "wants": [
             {

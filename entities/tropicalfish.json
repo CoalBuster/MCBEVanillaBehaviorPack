@@ -205,8 +205,6 @@
           "value": 14
         }
       },
-
-      //predefined school types
       "minecraft:anenonme": {
         "minecraft:variant": {
           "value": 1
@@ -561,7 +559,7 @@
       "minecraft:underwater_movement": {
         "value": 0.12
       },
-      "minecraft:navigation.generic": { // Allows the mob to go through water
+      "minecraft:navigation.generic": {
         "is_amphibious": false,
         "can_path_over_water": false,
         "can_swim": true,
@@ -590,7 +588,7 @@
         "idle_time": 5.0,
         "success_rate": 0.1
       },
-      "minecraft:behavior.random_swim": { // Randomly selects points to go to, even in water
+      "minecraft:behavior.random_swim": {
         "priority": 3,
         "speed_multiplier": 1.0,
         "xz_dist": 16,

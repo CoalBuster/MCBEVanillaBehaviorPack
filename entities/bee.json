@@ -16,15 +16,15 @@
                 "minecraft:ageable": {
                     "duration": 1200,
                     "feed_items": [ 
-                        "minecraft:red_flower",     // All small flowers except Dandelion
-                        "minecraft:yellow_flower",  // Dandelion
+                        "minecraft:red_flower",
+                        "minecraft:yellow_flower",
                         "minecraft:wither_rose",
-                        "minecraft:double_plant:0", // Sunflower
-                        "minecraft:double_plant:1", // Lilac
-                        "minecraft:double_plant:4", // Rose Bush
-                        "minecraft:double_plant:5",  // Peony
-                        "minecraft:flowering_azalea", //Flowering Azalea
-                        "minecraft:azalea_leaves_flowered" //Flowering Azalea leaves
+                        "minecraft:double_plant:0",
+                        "minecraft:double_plant:1",
+                        "minecraft:double_plant:4",
+                        "minecraft:double_plant:5",
+                        "minecraft:flowering_azalea",
+                        "minecraft:azalea_leaves_flowered"
                     ],
                     "grow_up": {
                         "event": "minecraft:ageable_grow_up",
@@ -32,7 +32,7 @@
                     }
                 },
                 "minecraft:behavior.follow_parent": {
-                    "priority": 11, // This has to be lower priority than move to block goal so that bee seek shelter in rain instead of following parents
+                    "priority": 11,
                     "speed_multiplier": 1.1
                 }
             },
@@ -56,15 +56,15 @@
                         }
                     },
                     "breed_items": [ 
-                        "minecraft:red_flower",     // All small flowers except Dandelion
-                        "minecraft:yellow_flower",  // Dandelion
+                        "minecraft:red_flower",
+                        "minecraft:yellow_flower",
                         "minecraft:wither_rose",
-                        "minecraft:double_plant:0", // Sunflower
-                        "minecraft:double_plant:1", // Lilac
-                        "minecraft:double_plant:4", // Rose Bush
-                        "minecraft:double_plant:5",  // Peony
-                        "minecraft:flowering_azalea", //Flowering Azalea
-                        "minecraft:azalea_leaves_flowered" //Flowering Azalea leaves
+                        "minecraft:double_plant:0",
+                        "minecraft:double_plant:1",
+                        "minecraft:double_plant:4",
+                        "minecraft:double_plant:5",
+                        "minecraft:flowering_azalea",
+                        "minecraft:azalea_leaves_flowered"
                     ]
                 }
             },
@@ -181,15 +181,15 @@
                     "target_selection_method": "random",
                     "target_offset": [0, 0.25, 0],
                     "target_blocks": [
-                        "minecraft:red_flower",     // All small flowers except Dandelion
-                        "minecraft:yellow_flower",  // Dandelion
+                        "minecraft:red_flower",
+                        "minecraft:yellow_flower",
                         "minecraft:wither_rose",
-                        "minecraft:double_plant:8", // Sunflower top
-                        "minecraft:double_plant:9", // Lilac top
-                        "minecraft:double_plant:12", // Rose Bush top
-                        "minecraft:double_plant:13",  // Peony top
-                        "minecraft:flowering_azalea", //Flowering azalea
-                        "minecraft:azalea_leaves_flowered" //Flowering Azalea leaves
+                        "minecraft:double_plant:8",
+                        "minecraft:double_plant:9",
+                        "minecraft:double_plant:12",
+                        "minecraft:double_plant:13",
+                        "minecraft:flowering_azalea",
+                        "minecraft:azalea_leaves_flowered"
                     ],
                     "on_stay_completed": [
                         {
@@ -260,7 +260,7 @@
                     "search_range": 16,
                     "search_height": 10,
                     "tick_interval": 1,
-                    "goal_radius": 0.633, // was tested with 0.4 when the goal radius wasn't squared. sqrt(0.4)~0.633
+                    "goal_radius": 0.633,
                     "target_blocks": [
                         "bee_nest",
                         "beehive"
@@ -312,12 +312,12 @@
                                             }
                                         ]
                                     },
-                                    { // Assume we are already going home if we have nectar
+                                    {
                                         "test": "has_component",
                                         "value": "minecraft:is_charged",
                                         "operator": "!="
                                     },
-                                    { // Assume we are already going home if we have nectar
+                                    {
                                         "test": "has_biome_tag",
                                         "value": "overworld"
                                     }
@@ -385,15 +385,15 @@
                 "within_radius": 8,
                 "can_tempt_vertically": true,
                 "items": [
-                    "minecraft:red_flower",     // All small flowers except Dandelion
-                    "minecraft:yellow_flower",  // Dandelion
+                    "minecraft:red_flower",
+                    "minecraft:yellow_flower",
                     "minecraft:wither_rose",
-                    "minecraft:double_plant:0", // Sunflower
-                    "minecraft:double_plant:1", // Lilac
-                    "minecraft:double_plant:4", // Rose Bush
-                    "minecraft:double_plant:5",  // Peony
-                    "minecraft:flowering_azalea", //Flowering azalea
-                    "minecraft:azalea_leaves_flowered" //Flowering Azalea leaves
+                    "minecraft:double_plant:0",
+                    "minecraft:double_plant:1",
+                    "minecraft:double_plant:4",
+                    "minecraft:double_plant:5",
+                    "minecraft:flowering_azalea",
+                    "minecraft:azalea_leaves_flowered"
                 ]
             },
             "minecraft:behavior.move_towards_home_restriction": {

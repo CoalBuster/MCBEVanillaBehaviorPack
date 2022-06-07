@@ -397,9 +397,6 @@
           ]
         }
       },
-      
-      //every goal that has to do with villagers working should go here (work goals, secondary goals)
-      //so they can be successfuly removed on schedule change
       "job_specific_goals": {
         "minecraft:behavior.inspect_bookshelf": {},
         "minecraft:behavior.harvest_farm_block": {},
@@ -679,10 +676,6 @@
           ]
         }
       },
-
-      // A grouping of components that should never be added
-      // however, they are here to flush out any artifact component groups
-      // that might linger between villager job switches
       "trade_components": {
         "minecraft:behavior.trade_interest": {},
         "minecraft:economy_trade_table": {}
@@ -1434,7 +1427,7 @@
         "family": ["villager", "mob"]
       },
       "minecraft:mark_variant": {
-        "value": 0 // Villagers have the Plains biome skin by default
+        "value": 0
       },
       "minecraft:breathable": {
         "total_supply": 15,
@@ -1957,80 +1950,64 @@
 
       "minecraft:entity_transformed": {
         "sequence": [
-          // Transform to baby villager
           {
             "filters": { "test": "has_component", "subject": "other", "operator": "==", "value": "minecraft:is_baby" },
             "add": { "component_groups": [ "baby", "child_schedule" ] }
           },
           {
-            // Transform to adult villager
             "filters": { "test": "has_component", "subject": "other", "operator": "!=", "value": "minecraft:is_baby" },
             "sequence": [ 
-              // Transform to adult villager
               {
                 "add": { "component_groups": [ "adult" ] }
               },
-              // Transform to farmer villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "farmer"},
                   "add": { "component_groups": [ "farmer", "behavior_peasant", "farmer_schedule" ] }
               },
-              // Transform to fisherman villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "fisherman"},
                   "add": { "component_groups": [ "fisherman", "behavior_peasant", "fisher_schedule" ] }
               },
-              // Transform to shepherd villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "shepherd" },
                   "add": { "component_groups": [ "shepherd", "behavior_peasant", "work_schedule" ] }
               },
-              // Transform to fletcher villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "fletcher" },
                   "add": { "component_groups": [ "fletcher", "behavior_peasant", "work_schedule" ] }
               },
-              // Transform to librarian villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "librarian" },
                   "add": { "component_groups": [ "librarian", "behavior_non_peasant", "librarian_schedule"] }
               },
-              // Transform to cartographer villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "cartographer" },
                   "add": { "component_groups": [ "cartographer", "behavior_non_peasant", "work_schedule" ] }
               },
-              // Transform to cleric villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "cleric" },
                   "add": { "component_groups": [ "cleric", "behavior_non_peasant", "work_schedule" ] }
               },
-              // Transform to armorer villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "armorer" },
                   "add": { "component_groups": [ "armorer", "behavior_non_peasant", "work_schedule" ] }
               },
-              // Transform to weaponsmith villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "weaponsmith" },
                   "add": { "component_groups": [ "weaponsmith", "behavior_non_peasant", "work_schedule" ] }
               },
-              // Transform to toolsmith villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "toolsmith" },
                   "add": { "component_groups": [ "toolsmith", "behavior_non_peasant", "work_schedule" ] }
               },
-              // Transform to butcher villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "butcher" },
                   "add": { "component_groups": [ "butcher", "behavior_non_peasant", "work_schedule" ] }
               },
-              // Transform to leatherworker villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "leatherworker" },
                   "add": { "component_groups": [ "leatherworker", "behavior_non_peasant", "work_schedule" ] }
               },
-              // Transform to mason villager
               {
                   "filters": { "test": "is_family", "subject": "other", "value": "stone_mason" },
                   "add": { "component_groups": [ "mason", "behavior_non_peasant", "work_schedule" ] }
@@ -2038,7 +2015,6 @@
             ]
           },
           {
-           // Transform from zombie to correct villager skin (mark var already set)
             "filters": { "test": "is_family", "subject": "other", "operator": "==", "value": "zombie_villager" }, 
             "sequence" : [
               {
@@ -2092,7 +2068,6 @@
             ]
           },
           {
-           // Transform from v1 - > v2 to correct villager skin (mark var not set so test biome)
             "filters": { "test": "is_family", "subject": "other", "operator": "==", "value": "villager" }, 
             "sequence" : [
               {
@@ -2462,7 +2437,7 @@
         "add": { "component_groups": [ "trade_resupply_component_group" ] }
       },
 
-      "minecraft:start_celebrating": { // Event must be called exactly this for village to fire it when a raid is won
+      "minecraft:start_celebrating": {
         "add": { "component_groups": [ "minecraft:celebrate" ] }
       },
 

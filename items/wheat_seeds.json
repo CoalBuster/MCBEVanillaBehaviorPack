@@ -7,7 +7,7 @@
 
     "components": {
       "minecraft:seed": {
-        "crop_result": "wheat" // wheatCrops
+        "crop_result": "wheat"
       }
     }
   }

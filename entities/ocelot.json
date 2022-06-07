@@ -128,7 +128,6 @@
           "breed_items": [ "fish", "salmon" ]
         }
       },
-      // minecraft:ocelot_tame is only here for backwards compatibility purposes, ocelots are no longer tameable in Vanilla Minecraft
       "minecraft:ocelot_tame": {
         "minecraft:is_tamed": {
         },
@@ -397,7 +396,6 @@
           }
         ]
       },
-      // Leashing and unleashing are only here for backwards compatibility purposes, ocelots are no longer leashable in Vanilla Minecraft
       "minecraft:on_leash": {
         "add": {
           "component_groups": [

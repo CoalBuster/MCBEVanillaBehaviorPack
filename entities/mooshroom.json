@@ -58,7 +58,7 @@
             }
           },
           "deny_parents_variant": {
-            "chance": 0.00098, // Roughly 1/1024
+            "chance": 0.00098,
             "min_variant": 0,
             "max_variant": 1
           }
@@ -87,7 +87,7 @@
             },
             {
               "on_interact": {
-                "filters": { // allium
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:2"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -105,7 +105,7 @@
             },
             {
               "on_interact": {
-                "filters": { // bluet
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:3"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -123,7 +123,7 @@
             },
             {
               "on_interact": {
-                "filters": { // orchid
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:1"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -141,7 +141,7 @@
             },
             {
               "on_interact": {
-                "filters": { // cornflower
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:9"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -159,7 +159,7 @@
             },
             {
               "on_interact": {
-                "filters": { // Dandelion
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "yellow_flower"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -177,7 +177,7 @@
             },
             {
               "on_interact": {
-                "filters": { // lily of the valley
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:10"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -195,7 +195,7 @@
             },
             {
               "on_interact": {
-                "filters": { // daisy
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:8"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -213,7 +213,7 @@
             },
             {
               "on_interact": {
-                "filters": { // poppy
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:0"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},
@@ -231,7 +231,7 @@
             },
             {
               "on_interact": {
-                "filters": { // tulips
+                "filters": {
                   "any_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:4"},
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_flower:5"},
@@ -254,7 +254,7 @@
             },
             {
               "on_interact": {
-                "filters": { // rose
+                "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "wither_rose"},
                     { "test" :  "is_family", "subject" : "other", "value" :  "player"},

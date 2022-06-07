@@ -128,8 +128,6 @@
       },
       "minecraft:nameable": {
       },
-
-      // Zombie_husk Components
       "minecraft:type_family": {
         "family": [ "husk", "zombie", "undead", "monster", "mob" ]
       },
@@ -407,7 +405,6 @@
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
-      // Zombie_husk Behaviors
       "minecraft:behavior.equip_item": {
         "priority": 2
       },

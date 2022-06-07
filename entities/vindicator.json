@@ -242,8 +242,6 @@
           }
         ]
       },
-
-      // vindicator Components
       "minecraft:type_family": {
         "family": [ "vindicator", "monster", "illager", "mob" ]
       },
@@ -293,8 +291,6 @@
       "minecraft:equipment": {
         "table": "loot_tables/entities/vindicator_gear.json"
       },
-
-      // vindicator Behaviors
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -419,7 +415,7 @@
           ]
         }
       },
-      "minecraft:start_celebrating": { // Event must be called exactly this for village to fire it when a raid is lost
+      "minecraft:start_celebrating": {
         "sequence": [
           {
             "add": { "component_groups": [ "minecraft:celebrate" ] }

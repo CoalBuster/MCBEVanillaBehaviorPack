@@ -172,7 +172,7 @@
         "speed_modifier": -0.2,
         "potions": [
           {
-            "id": 7, // Short invisibility
+            "id": 7,
             "chance": 1.0,
             "filters": {
               "all_of": [
@@ -198,7 +198,7 @@
             }
           },
           {
-            "id": 8, // Long invisibility
+            "id": 8,
             "chance": 1.0,
             "filters": {
               "all_of": [

@@ -377,7 +377,6 @@
     "events": {
       "minecraft:entity_transformed": {
         "sequence": [
-          // Transform baby pig to baby zombie pigman
           {
             "filters": {
               "test": "has_component",
@@ -391,7 +390,6 @@
               ]
             }
           },
-          // Transform adult pig to adult zombie pigman
           {
             "filters": {
               "test": "has_component",

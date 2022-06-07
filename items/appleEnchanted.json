@@ -24,11 +24,11 @@
           {
             "name": "absorption",
             "chance": 1.0,
-            "duration": 120, // 2 * 60
+            "duration": 120,
             "amplifier": 3
           },
           {
-            "name": "resistance", // damage resistance
+            "name": "resistance",
             "chance": 1.0,
             "duration": 300,
             "amplifier": 0
