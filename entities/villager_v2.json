@@ -1552,7 +1552,8 @@
                   { "test" : "is_family", "subject" : "other", "value" : "zombie"},
                   { "test" : "is_family", "subject" : "other", "value" : "zombie_villager"},
                   { "test" : "is_family", "subject" : "other", "value" : "illager"},
-                  { "test" : "is_family", "subject" : "other", "value" : "vex"}
+                  { "test" : "is_family", "subject" : "other", "value" : "vex"},
+                  { "test" : "is_family", "subject" : "other", "value" : "zoglin" }
                 ]
             },
             "max_dist": 8,
@@ -1806,8 +1807,16 @@
           },
           {
             "filters": {
-              "test": "has_biome_tag",
-              "value": "swamp"
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "swamp"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mangrove_swamp"
+                }
+              ]
             },
             "add": { "component_groups": [ "swamp_villager" ] }
           },
@@ -1928,7 +1937,18 @@
             "add": { "component_groups": [ "snow_villager" ] }
           },
           {
-            "filters": { "test": "has_biome_tag", "value": "swamp" },
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "swamp"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mangrove_swamp"
+                }
+              ]
+            },
             "add": { "component_groups": [ "swamp_villager" ] }
           },
           {
@@ -2130,7 +2150,18 @@
                 "add": { "component_groups": [ "snow_villager" ] }
               },
               {
-                "filters": { "test": "has_biome_tag", "value": "swamp" },
+                "filters": {
+                  "any_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "value": "swamp"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "value": "mangrove_swamp"
+                    }
+                  ]
+                },
                 "add": { "component_groups": [ "swamp_villager" ] }
               },
               {
@@ -2208,7 +2239,18 @@
             "add": { "component_groups": [ "snow_villager" ] }
           },
           {
-            "filters": { "test": "has_biome_tag", "value": "swamp" },
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "swamp"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mangrove_swamp"
+                }
+              ]
+            },
             "add": { "component_groups": [ "swamp_villager" ] }
           },
           {
