@@ -77,7 +77,6 @@
         "minecraft:environment_sensor": {
           "triggers": [
             {
-              // If this is a Wandering Trader's llama and it was just released from its leash, make it tame
               "filters": {
                 "all_of": [
                 {
