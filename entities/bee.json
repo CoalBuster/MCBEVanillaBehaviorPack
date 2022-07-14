@@ -15,7 +15,7 @@
                 },
                 "minecraft:ageable": {
                     "duration": 1200,
-                    "feed_items": [ 
+                    "feed_items": [
                         "minecraft:red_flower",
                         "minecraft:yellow_flower",
                         "minecraft:wither_rose",
@@ -56,7 +56,7 @@
                             "target": "baby"
                         }
                     },
-                    "breed_items": [ 
+                    "breed_items": [
                         "minecraft:red_flower",
                         "minecraft:yellow_flower",
                         "minecraft:wither_rose",
@@ -105,10 +105,13 @@
                     "priority": 1,
                     "speed_multiplier": 1.25,
                     "force": true
-                  },
+                },
                 "minecraft:timer": {
                     "looping": false,
-                    "time": [20,50],
+                    "time": [
+                        20,
+                        50
+                    ],
                     "randomInterval": true,
                     "time_down_event": {
                         "event": "stop_panicking_after_fire",
@@ -118,7 +121,7 @@
             },
             "countdown_to_perish": {
                 "minecraft:mark_variant": {
-                  "value": 1
+                    "value": 1
                 },
                 "minecraft:behavior.panic": {
                     "priority": 1,
@@ -127,7 +130,10 @@
                 },
                 "minecraft:timer": {
                     "looping": false,
-                    "time": [10, 60],
+                    "time": [
+                        10,
+                        60
+                    ],
                     "randomInterval": true,
                     "time_down_event": {
                         "event": "perish_event",
@@ -135,7 +141,12 @@
                     }
                 },
                 "minecraft:type_family": {
-                    "family": [ "bee", "mob", "arthropod", "pacified" ]
+                    "family": [
+                        "bee",
+                        "mob",
+                        "arthropod",
+                        "pacified"
+                    ]
                 }
             },
             "perish": {
@@ -154,9 +165,9 @@
                     "entity_types": [
                         {
                             "filters": {
-                              "test": "is_family",
-                              "subject": "other",
-                              "value": "player"
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "player"
                             },
                             "max_dist": 10
                         }
@@ -181,8 +192,17 @@
                     "goal_radius": 1.0,
                     "stay_duration": 20.0,
                     "target_selection_method": "random",
-                    "target_offset": [0, 0.25, 0],
-                    "target_block_filters": { "test": "is_waterlogged", "subject": "block", "operator": "==", "value": false },
+                    "target_offset": [
+                        0,
+                        0.25,
+                        0
+                    ],
+                    "target_block_filters": {
+                        "test": "is_waterlogged",
+                        "subject": "block",
+                        "operator": "==",
+                        "value": false
+                    },
                     "target_blocks": [
                         "minecraft:red_flower",
                         "minecraft:yellow_flower",
@@ -209,10 +229,10 @@
                         "event": "find_flower_timeout"
                     }
                 },
-                "minecraft:ambient_sound_interval" :{
-                    "event_name" : "ambient.pollinate",
-                    "range" : 3.0,
-                    "value" : 2.0
+                "minecraft:ambient_sound_interval": {
+                    "event_name": "ambient.pollinate",
+                    "range": 3.0,
+                    "value": 2.0
                 }
             },
             "has_nectar": {
@@ -231,9 +251,17 @@
                     "on_home": [
                         {
                             "filters": {
-                                "any_of":[
-                                    { "test": "is_block", "subject": "block", "value": "minecraft:bee_nest" },
-                                    { "test": "is_block", "subject": "block", "value": "minecraft:beehive" }
+                                "any_of": [
+                                    {
+                                        "test": "is_block",
+                                        "subject": "block",
+                                        "value": "minecraft:bee_nest"
+                                    },
+                                    {
+                                        "test": "is_block",
+                                        "subject": "block",
+                                        "value": "minecraft:beehive"
+                                    }
                                 ]
                             },
                             "event": "minecraft:bee_returned_to_hive",
@@ -241,9 +269,19 @@
                         },
                         {
                             "filters": {
-                                "all_of":[
-                                    { "test": "is_block", "subject": "block", "operator": "!=", "value": "minecraft:bee_nest" },
-                                    { "test": "is_block", "subject": "block", "operator": "!=", "value": "minecraft:beehive" }
+                                "all_of": [
+                                    {
+                                        "test": "is_block",
+                                        "subject": "block",
+                                        "operator": "!=",
+                                        "value": "minecraft:bee_nest"
+                                    },
+                                    {
+                                        "test": "is_block",
+                                        "subject": "block",
+                                        "operator": "!=",
+                                        "value": "minecraft:beehive"
+                                    }
                                 ]
                             },
                             "event": "find_hive_event",
@@ -251,10 +289,10 @@
                         }
                     ],
                     "on_failed": [
-                      {
-                        "event": "find_hive_event",
-                        "target": "self"
-                      }
+                        {
+                            "event": "find_hive_event",
+                            "target": "self"
+                        }
                     ]
                 }
             },
@@ -288,7 +326,10 @@
             "hive_full": {
                 "minecraft:timer": {
                     "looping": false,
-                    "time": [5, 20],
+                    "time": [
+                        5,
+                        20
+                    ],
                     "randomInterval": true,
                     "time_down_event": {
                         "event": "find_hive_event",
@@ -372,17 +413,16 @@
                     "effect_duration": 18
                 }
             },
-            "default_sound" : {
-                "minecraft:ambient_sound_interval" :{
-                    "event_name" : "ambient",
-                    "range" : 0.0,
-                    "value" : 0.0
+            "default_sound": {
+                "minecraft:ambient_sound_interval": {
+                    "event_name": "ambient",
+                    "range": 0.0,
+                    "value": 0.0
                 }
             }
         },
         "components": {
-            "minecraft:is_hidden_when_invisible": {
-            },
+            "minecraft:is_hidden_when_invisible": {},
             "minecraft:behavior.tempt": {
                 "priority": 5,
                 "speed_multiplier": 1.25,
@@ -402,7 +442,7 @@
                 ]
             },
             "minecraft:behavior.move_towards_home_restriction": {
-              "priority": 9
+                "priority": 9
             },
             "minecraft:behavior.random_hover": {
                 "priority": 12,
@@ -410,7 +450,10 @@
                 "y_dist": 8,
                 "y_offset": -1,
                 "interval": 1,
-                "hover_height": [1, 4]
+                "hover_height": [
+                    1,
+                    4
+                ]
             },
             "minecraft:leashable": {
                 "soft_distance": 4.0,
@@ -424,7 +467,11 @@
                 "priority": 19
             },
             "minecraft:type_family": {
-                "family": [ "bee", "mob", "arthropod" ]
+                "family": [
+                    "bee",
+                    "mob",
+                    "arthropod"
+                ]
             },
             "minecraft:on_target_acquired": {
                 "event": "attacked",
@@ -438,8 +485,7 @@
                 "width": 0.55,
                 "height": 0.5
             },
-            "minecraft:conditional_bandwidth_optimization": {
-            },
+            "minecraft:conditional_bandwidth_optimization": {},
             "minecraft:home": {
                 "restriction_radius": 22,
                 "home_block_list": [
@@ -495,7 +541,7 @@
             "minecraft:nameable": {},
             "minecraft:block_sensor": {
                 "sensor_radius": 16,
-                "sources" : [
+                "sources": [
                     {
                         "test": "has_silk_touch",
                         "subject": "other",
@@ -505,7 +551,8 @@
                 "on_break": [
                     {
                         "block_list": [
-                            "minecraft:beehive", "minecraft:bee_nest"
+                            "minecraft:beehive",
+                            "minecraft:bee_nest"
                         ],
                         "on_block_broken": "hive_destroyed"
                     }
@@ -515,7 +562,7 @@
             "minecraft:pushable": {
                 "is_pushable": true,
                 "is_pushable_by_piston": true
-              }
+            }
         },
         "events": {
             "minecraft:entity_spawned": {
@@ -612,7 +659,7 @@
                     }
                 ]
             },
-            "stop_panicking_after_fire" : {
+            "stop_panicking_after_fire": {
                 "remove": {
                     "component_groups": [
                         "escape_fire"
@@ -670,36 +717,60 @@
                         }
                     },
                     {
-                        "filters": { "test" : "is_difficulty", "value" : "easy"},            
+                        "filters": {
+                            "test": "is_difficulty",
+                            "value": "easy"
+                        },
                         "remove": {
-                            "component_groups": [ "normal_attack", "hard_attack" ]
+                            "component_groups": [
+                                "normal_attack",
+                                "hard_attack"
+                            ]
                         },
                         "add": {
-                            "component_groups": [ "easy_attack" ]
+                            "component_groups": [
+                                "easy_attack"
+                            ]
                         }
                     },
                     {
-                        "filters": { "test" : "is_difficulty", "value" : "normal"},
+                        "filters": {
+                            "test": "is_difficulty",
+                            "value": "normal"
+                        },
                         "remove": {
-                            "component_groups": [ "easy_attack", "hard_attack" ]
+                            "component_groups": [
+                                "easy_attack",
+                                "hard_attack"
+                            ]
                         },
                         "add": {
-                            "component_groups": [ "normal_attack" ]
+                            "component_groups": [
+                                "normal_attack"
+                            ]
                         }
                     },
                     {
-                        "filters": { "test" : "is_difficulty", "value" : "hard"},
+                        "filters": {
+                            "test": "is_difficulty",
+                            "value": "hard"
+                        },
                         "remove": {
-                            "component_groups": [ "easy_attack", "normal_attack" ]
+                            "component_groups": [
+                                "easy_attack",
+                                "normal_attack"
+                            ]
                         },
                         "add": {
-                            "component_groups": [ "hard_attack" ]
+                            "component_groups": [
+                                "hard_attack"
+                            ]
                         }
                     }
                 ]
             },
             "calmed_down": {
-                "add" : {
+                "add": {
                     "component_groups": [
                         "shelter_detection",
                         "return_to_home"
@@ -742,38 +813,38 @@
             "find_hive_timeout": {
                 "sequence": [
                     {
-                       "filters": {
-                           "test": "has_component",
-                           "operator": "!=",
-                           "value": "minecraft:is_charged"
-                       },
-                       "remove": {
-                           "component_groups": [
-                               "find_hive",
-                               "escape_fire"
-                           ]
-                       },
-                       "add": {
-                           "component_groups": [
-                               "look_for_food"
-                           ]
-                       }
+                        "filters": {
+                            "test": "has_component",
+                            "operator": "!=",
+                            "value": "minecraft:is_charged"
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "find_hive",
+                                "escape_fire"
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "look_for_food"
+                            ]
+                        }
                     },
                     {
-                       "filters": {
-                           "test": "has_component",
-                           "value": "minecraft:is_charged"
-                       },
-                       "remove": {
-                           "component_groups": [
-                               "find_hive"
-                           ]
-                       },
-                       "add": {
-                           "component_groups": [
-                               "return_to_home"
-                           ]
-                       }
+                        "filters": {
+                            "test": "has_component",
+                            "value": "minecraft:is_charged"
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "find_hive"
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "return_to_home"
+                            ]
+                        }
                     }
                 ]
             },
@@ -820,8 +891,7 @@
                     ]
                 }
             },
-            
-            "countdown_to_perish_event" : {
+            "countdown_to_perish_event": {
                 "remove": {
                     "component_groups": [
                         "collect_nectar",
@@ -840,7 +910,7 @@
                     ]
                 }
             },
-            "perish_event":{
+            "perish_event": {
                 "add": {
                     "component_groups": [
                         "perish"

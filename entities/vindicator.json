@@ -387,6 +387,7 @@
       "minecraft:spawn_as_illager_captain": {
         "add": {
           "component_groups": [
+            "minecraft:default_targeting",
             "minecraft:illager_squad_captain"
           ]
         }
@@ -394,6 +395,7 @@
       "minecraft:promote_to_illager_captain": {
         "add": {
           "component_groups": [
+            "minecraft:default_targeting",
             "minecraft:illager_squad_captain"
           ]
         },
@@ -406,6 +408,7 @@
       "minecraft:promote_to_patrol_captain": {
         "add": {
           "component_groups": [
+            "minecraft:default_targeting",
             "minecraft:patrol_captain"
           ]
         },
